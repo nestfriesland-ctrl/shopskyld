@@ -1,244 +1,58 @@
-<!DOCTYPE html>
-<html lang="nl" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKYLD | Scientific Artisan Ice Cream</title>
-    <meta name="description" content="De symbiose van Friese oorsprong, A2-wetenschap en nieuwe luxe. Exclusief voor fijnmazige retail en high-end horeca.">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        clay: {
-                            800: '#3E3B36', // Friese Klei (Dark Anthracite/Brown mix)
-                            900: '#2A2825',
-                        },
-                        cream: {
-                            50: '#F9F7F2', // A2 Room (Warm White)
-                            100: '#F2EFE9',
-                        },
-                        neon: {
-                            orange: '#FF5F1F', // Scientific/Modern Accent
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
-                        'breathe': 'breathe 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        breathe: {
-                            '0%, 100%': { transform: 'scale(1)' },
-                            '50%': { transform: 'scale(1.02)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body {
-            background-color: #F9F7F2;
-            color: #3E3B36;
-        }
-        
-        /* Custom Scrollbar for Luxury Feel */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #F9F7F2; }
-        ::-webkit-scrollbar-thumb { background: #3E3B36; }
-        ::-webkit-scrollbar-thumb:hover { background: #FF5F1F; }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .text-outline {
-            -webkit-text-stroke: 1px rgba(62, 59, 54, 0.2);
-            color: transparent;
-        }
-
-        /* Smooth Grain Overlay */
-        .grain-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 50;
-        }
-    </style>
-</head>
-<body class="antialiased selection:bg-neon-orange selection:text-white">
-
-    <div class="grain-overlay"></div>
-
-    <nav class="fixed top-0 w-full z-40 transition-all duration-500 bg-cream-50/90 backdrop-blur-md border-b border-clay-800/5">
-        <div class="max-w-[1400px] mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="group relative">
-                <span class="font-serif text-3xl font-bold tracking-tighter text-clay-800">SKYLD</span>
-                <span class="absolute -bottom-2 left-0 text-[8px] font-mono font-medium text-neon-orange tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity uppercase">Scientific Artisan</span>
-            </a>
-
-            <div class="hidden md:flex items-center gap-12 font-sans text-xs font-medium tracking-widest uppercase text-clay-800/80">
-                <a href="#origin" class="hover:text-neon-orange transition-colors">Oorsprong</a>
-                <a href="#science" class="hover:text-neon-orange transition-colors">A2 Wetenschap</a>
-                <a href="#gastronomy" class="hover:text-neon-orange transition-colors">Gastronomie</a>
-                <a href="#contact" class="hover:text-neon-orange transition-colors">Partner Worden</a>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <a href="#" class="hidden lg:flex items-center gap-2 text-[10px] font-mono text-clay-800 border border-clay-800 px-4 py-2 rounded-full hover:bg-clay-800 hover:text-white transition-all">
-                    <i data-lucide="lock" class="w-3 h-3"></i>
-                    B2B PORTAL
-                </a>
-                <button class="md:hidden text-clay-800">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <header class="relative h-[100vh] w-full overflow-hidden flex items-center justify-center bg-clay-900">
-        <div class="absolute inset-0 z-0 opacity-60">
-             <video autoplay muted loop playsinline class="w-full h-full object-cover grayscale">
-                <source src="assets/Video_header_final.mov" type="video/mp4"> 
-            </video>
-        </div>
-        
-        <div class="absolute inset-0 bg-gradient-to-t from-clay-900 via-transparent to-black/30 z-10"></div>
-
-        <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
-            <span class="block font-mono text-neon-orange text-xs tracking-[0.3em] uppercase mb-6 animate-fade-in-up">Est. Noardeast-Fryslân</span>
-            
-            <h1 class="font-serif text-5xl md:text-8xl text-cream-50 leading-[1.1] mb-8 animate-fade-in-up delay-100">
-                Oerkracht in <br>
-                <span class="italic font-light">Verfijning.</span>
-            </h1>
-
-            <p class="font-sans text-clay-800/80 md:text-cream-50/80 text-sm md:text-lg max-w-xl mx-auto leading-relaxed mb-12 animate-fade-in-up delay-200">
-                De zuiverste Friese gastronomie. Gedreven door de natuur, geperfectioneerd door wetenschap. 
-                Een nieuwe standaard voor retail en horeca.
-            </p>
-
-            <a href="#origin" class="inline-flex flex-col items-center gap-2 text-cream-50/50 hover:text-neon-orange transition-colors animate-fade-in-up delay-300">
-                <span class="text-[10px] font-mono uppercase tracking-widest">Ontdek het terroir</span>
-                <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
-            </a>
-        </div>
-    </header>
-
-    <section id="origin" class="py-24 md:py-32 bg-cream-50 px-6">
-        <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
-            <div class="reveal relative">
-                <div class="aspect-[4/5] bg-clay-200 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2832&auto=format&fit=crop" alt="Fries Landschap" class="w-full h-full object-cover sepia-[0.2] grayscale-[0.3]">
-                    <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur p-4 max-w-xs">
-                        <p class="font-mono text-[10px] text-clay-800 mb-1">COORDINATES</p>
-                        <p class="font-mono text-xs text-clay-800 font-bold">53°21'N 6°08'E (MORRA)</p>
-                    </div>
-                </div>
-                <div class="absolute -right-12 top-24 hidden lg:block bg-neon-orange text-white p-4 w-48 z-10">
-                    <p class="font-mono text-[10px] uppercase border-b border-white/30 pb-2 mb-2">Soil Analysis</p>
-                    <p class="font-sans text-xs leading-relaxed">Zilte kleigrond rijk aan mineralen. Directe invloed op gras-nutriënten en melksmaak.</p>
-                </div>
-            </div>
-
-            <div class="reveal space-y-8">
-                <h2 class="font-serif text-4xl md:text-6xl text-clay-900 leading-tight">
-                    Gekneed door <br>de Friese wind.
-                </h2>
-                <div class="w-16 h-0.5 bg-neon-orange"></div>
-                
-                <p class="font-sans text-clay-800 text-lg leading-relaxed">
-                    Dit is geen "gezellige boerderij"-romantiek. Dit is het ruige landschap van Noardeast-Fryslân. De koeien grazen hier op zilte kwelderwallen en rijke zeekleipolders.
-                </p>
-                <p class="font-sans text-clay-800/70 text-base leading-relaxed">
-                    Deze specifieke bodemsamenstelling geeft onze A2-melk zijn karakter. Waar anderen kiezen voor zoet en vlak, kiezen wij voor diepgang en oorsprong. Wij noemen dit de <strong>"Soil Impact"</strong>. Het is de basis van ijs dat niet alleen vult, maar voedt en verrast.
-                </p>
-
-                <div class="grid grid-cols-2 gap-8 pt-8 border-t border-clay-800/10">
-                    <div>
-                        <span class="block font-serif text-3xl text-clay-900 mb-1">A2</span>
-                        <span class="font-mono text-xs text-clay-500 uppercase">Oer-Eiwit Structuur</span>
-                    </div>
-                    <div>
-                        <span class="block font-serif text-3xl text-clay-900 mb-1">100%</span>
-                        <span class="font-mono text-xs text-clay-500 uppercase">Traceable Sourcing</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-clay-900 text-cream-50 relative overflow-hidden">
+<section class="py-24 bg-clay-900 text-cream-50 relative overflow-hidden">
         <div class="absolute top-10 left-0 w-full text-center pointer-events-none opacity-5">
-            <span class="font-serif text-[12vw] leading-none text-outline">SCIENTIFIC</span>
+            <span class="font-serif text-[12vw] leading-none text-outline">GASTRONOMY</span>
         </div>
 
         <div class="max-w-[1400px] mx-auto px-6 relative z-10">
             <div class="text-center mb-20 reveal">
-                <span class="font-mono text-neon-orange text-xs tracking-widest uppercase">The Collection</span>
-                <h2 class="font-serif text-4xl md:text-5xl mt-4">Raw & Refined</h2>
-                <p class="text-white/60 mt-4 font-sans max-w-lg mx-auto">Minimalistische esthetiek. Maximale transparantie. Clean label ontwerp dat past in de moderne delicatessenzaak.</p>
+                <span class="font-mono text-neon-orange text-xs tracking-widest uppercase">The One Base</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-4">The Perfect Canvas</h2>
+                <p class="text-white/60 mt-4 font-sans max-w-lg mx-auto">
+                    Wij leveren de perfecte basis: A2-Eiwit, volromig en een fris accent van citroen. 
+                    Jij bepaalt de signatuur. Één basisproduct, eindeloze toepassingen.
+                </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
+                
                 <div class="group relative bg-clay-800/50 border border-white/5 hover:border-neon-orange/50 transition-all duration-500 p-8 reveal">
-                    <div class="absolute top-4 right-4 font-mono text-[10px] text-white/40">NO. 01</div>
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-white/40">THE BASE</div>
                     <div class="h-64 flex items-center justify-center py-8">
                         <div class="w-40 h-48 bg-cream-100 rounded-lg shadow-2xl flex items-center justify-center relative group-hover:-translate-y-2 transition-transform duration-500">
                             <span class="font-serif text-clay-900 font-bold text-xl">SKYLD</span>
-                            <div class="absolute bottom-4 w-full text-center text-[10px] font-mono text-clay-600 uppercase">Pure White</div>
+                            <div class="absolute bottom-4 w-full text-center text-[10px] font-mono text-clay-600 uppercase">Original Base</div>
                         </div>
                     </div>
                     <div class="mt-6">
-                        <h3 class="font-serif text-2xl mb-2">A2 Vanille & Zeezout</h3>
-                        <p class="font-sans text-sm text-white/60 mb-4 line-clamp-2">Madagaskar bourbon vanille gecombineerd met een vleugje Waddenzout voor diepte.</p>
+                        <h3 class="font-serif text-2xl mb-2">SKYLD Original</h3>
+                        <p class="font-sans text-sm text-white/60 mb-4 line-clamp-3">
+                            De kern van alles. Hoogwaardig A2-eiwitijs met een subtiele 'zest' van citroen. Ontworpen om zowel zoet als hartig te dragen.
+                        </p>
                         <div class="flex gap-2">
-                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">High Protein</span>
-                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">Clean Label</span>
+                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">Base Product</span>
+                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">Ready to Serve</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="group relative bg-clay-800/50 border border-white/5 hover:border-neon-orange/50 transition-all duration-500 p-8 reveal delay-100">
-                    <div class="absolute top-4 right-4 font-mono text-[10px] text-white/40">NO. 02</div>
-                    <div class="h-64 flex items-center justify-center py-8">
-                        <div class="w-40 h-48 bg-clay-800 border border-white/20 rounded-lg shadow-2xl flex items-center justify-center relative group-hover:-translate-y-2 transition-transform duration-500">
-                             <span class="font-serif text-cream-50 font-bold text-xl">SKYLD</span>
-                             <div class="absolute bottom-4 w-full text-center text-[10px] font-mono text-cream-50 uppercase">Dark Matter</div>
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-white/40">SERVE IDEA 01</div>
+                    <div class="h-64 flex items-center justify-center py-8 overflow-hidden relative rounded-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-clay-900 via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Olijfolie IJs">
+                        
+                        <div class="relative z-20 text-center">
+                            <span class="font-serif text-3xl italic text-cream-50">Savory</span>
                         </div>
                     </div>
                     <div class="mt-6">
-                        <h3 class="font-serif text-2xl mb-2">Dark Chocolate & Miso</h3>
-                        <p class="font-sans text-sm text-white/60 mb-4 line-clamp-2">70% Single origin cacao verrijkt met witte miso voor een unieke umami ervaring.</p>
+                        <h3 class="font-serif text-2xl mb-2">Olive Oil & Sea Salt</h3>
+                        <p class="font-sans text-sm text-white/60 mb-4">
+                            Het citroenzuurtje in SKYLD snijdt perfect door rijke olijfolie. Afgetopt met Fries zeezout. Een verfijnd tussengerecht of dessert.
+                        </p>
                         <div class="flex gap-2">
-                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">Savory</span>
-                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">Antioxidant</span>
+                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">High Margin</span>
+                            <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">Minimal Effort</span>
                         </div>
                     </div>
                 </div>
@@ -246,165 +60,24 @@
                  <div class="group relative bg-gradient-to-br from-neon-orange/10 to-clay-800/50 border border-neon-orange/30 p-8 reveal delay-200">
                     <div class="absolute top-4 right-4 flex items-center gap-2">
                          <span class="w-2 h-2 bg-neon-orange rounded-full animate-pulse"></span>
-                         <span class="font-mono text-[10px] text-neon-orange">CHEF'S EDITION</span>
+                         <span class="font-mono text-[10px] text-neon-orange">TREND 2026</span>
                     </div>
-                    <div class="h-64 flex items-center justify-center py-8">
-                        <div class="w-40 h-48 bg-white/5 backdrop-blur-md border border-neon-orange/40 rounded-lg shadow-2xl flex items-center justify-center relative group-hover:-translate-y-2 transition-transform duration-500">
-                             <span class="font-serif text-neon-orange font-bold text-xl">SKYLD</span>
-                        </div>
+                    <div class="h-64 flex items-center justify-center py-8 overflow-hidden relative rounded-lg">
+                         <div class="absolute inset-0 bg-gradient-to-t from-clay-900 via-transparent to-transparent z-10"></div>
+                         <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=600&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Affogato">
+                         
+                         <div class="relative z-20 text-center">
+                             <span class="font-serif text-3xl italic text-cream-50">Affogato+</span>
+                         </div>
                     </div>
                     <div class="mt-6">
-                        <h3 class="font-serif text-2xl mb-2">Botanical: Zeekraal</h3>
-                        <p class="font-sans text-sm text-white/60 mb-4 line-clamp-2">Een hommage aan het Wad. Hartig, fris en perfect als tussengerecht of bij desserts.</p>
-                        <a href="#contact" class="inline-block text-xs font-mono text-neon-orange border-b border-neon-orange hover:text-white hover:border-white transition-colors">Vraag sample aan -></a>
+                        <h3 class="font-serif text-2xl mb-2">The Protein Affogato</h3>
+                        <p class="font-sans text-sm text-white/60 mb-4">
+                            Een dubbele espresso over een bol SKYLD. De hitte smelt het ijs, de proteïne schuimt op. Functioneel herstel in een Italiaanse jas.
+                        </p>
+                        <a href="#contact" class="inline-block text-xs font-mono text-neon-orange border-b border-neon-orange hover:text-white hover:border-white transition-colors">Bekijk Recept -></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="gastronomy" class="py-24 bg-white relative">
-        <div class="max-w-[1200px] mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-16 items-start">
-                
-                <div class="lg:col-span-5 reveal">
-                    <span class="font-mono text-clay-500 text-xs tracking-widest uppercase mb-4 block">Voor de Horeca Vernieuwer</span>
-                    <h2 class="font-serif text-4xl md:text-5xl text-clay-900 mb-6">Affogato &<br>Beyond.</h2>
-                    <p class="font-sans text-clay-800 text-base leading-relaxed mb-6">
-                        In een keuken die kampt met personeelstekort is efficiëntie koning. SKYLD biedt een 'High Value' basis voor desserts die minimale handeling vereisen.
-                    </p>
-                    <p class="font-sans text-clay-800 text-base leading-relaxed mb-8">
-                        Transformeer een standaard koffie-moment naar een <strong>Protein Power Affogato</strong>. Meer marge, betere beleving, gezonder verhaal.
-                    </p>
-                    
-                    <ul class="space-y-4 font-mono text-xs text-clay-600">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-neon-orange"></i>
-                            IDDSI Level 4 consistentie (Altijd schepbaar)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-neon-orange"></i>
-                            Functioneel: Herstel & Energie (Upsell argument)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-neon-orange"></i>
-                            Unieke Terroir Storytelling voor de gast
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="lg:col-span-7 reveal delay-100">
-                    <div class="bg-clay-50 border border-clay-200 p-8 md:p-12 rounded-none shadow-[20px_20px_0px_0px_rgba(62,59,54,1)]">
-                        <h3 class="font-serif text-2xl text-clay-900 mb-8 flex items-center justify-between">
-                            Marge Calculator
-                            <span class="text-xs font-mono text-clay-400 bg-white px-2 py-1 border border-clay-200">LIVE DATA</span>
-                        </h3>
-
-                        <div class="space-y-6">
-                            <div class="flex border-b border-clay-200 pb-6">
-                                <div class="w-1/2 pr-4 border-r border-clay-200 opacity-50">
-                                    <p class="font-mono text-[10px] uppercase text-clay-500 mb-1">Standard</p>
-                                    <p class="font-serif text-lg text-clay-900">Los Bolletje</p>
-                                    <p class="font-mono text-sm text-clay-600 mt-2">Winst: € 1,35</p>
-                                </div>
-                                <div class="w-1/2 pl-4 relative">
-                                    <div class="absolute -top-3 -right-2 bg-neon-orange text-white text-[8px] font-bold px-2 py-1 uppercase tracking-wider">Recommended</div>
-                                    <p class="font-mono text-[10px] uppercase text-neon-orange mb-1">SKYLD Signature</p>
-                                    <p class="font-serif text-lg text-clay-900">Dessert / Affogato</p>
-                                    <p class="font-mono text-sm text-clay-900 font-bold mt-2">Winst: € 5,50</p>
-                                </div>
-                            </div>
-
-                            <div class="bg-white p-6 border border-clay-200">
-                                <div class="flex justify-between items-end mb-2">
-                                    <span class="font-sans text-sm text-clay-600">Verkoopprijs</span>
-                                    <span class="font-mono text-lg font-bold text-clay-900">€ 9,50</span>
-                                </div>
-                                <div class="w-full h-4 bg-clay-100 flex">
-                                    <div class="h-full bg-clay-400 w-[20%]"></div> <div class="h-full bg-clay-300 w-[22%]"></div> <div class="h-full bg-neon-orange w-[58%] relative group cursor-help"> <div class="absolute -top-8 right-0 bg-clay-900 text-white text-[10px] px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                            58% Netto Marge
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between mt-2 text-[10px] font-mono text-clay-400 uppercase">
-                                    <span>Cost</span>
-                                    <span>Overhead</span>
-                                    <span class="text-neon-orange font-bold">Profit</span>
-                                </div>
-                            </div>
-
-                            <div class="pt-4 text-center">
-                                <a href="#contact" class="inline-block bg-clay-900 text-white font-mono text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-neon-orange transition-colors">
-                                    Download Horeca Brochure
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-clay-900 text-cream-50 border-t border-white/5">
-        <div class="max-w-[1000px] mx-auto px-6 text-center">
-            <i data-lucide="sprout" class="w-8 h-8 text-neon-orange mx-auto mb-6"></i>
-            <h2 class="font-serif text-4xl md:text-6xl mb-6">Join the Scientific Artisans.</h2>
-            <p class="font-sans text-white/60 text-lg mb-12 max-w-2xl mx-auto">
-                Bent u eigenaar van een delicatessenzaak, boerderijwinkel of high-end restaurant? 
-                Vraag toegang tot ons B2B portaal voor prijzen, samples en storytelling tools.
-            </p>
-
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="mailto:sales@skyld.nl" class="px-8 py-4 bg-cream-50 text-clay-900 font-sans font-bold hover:bg-neon-orange hover:text-white transition-all duration-300">
-                    Vraag Proefpakket Aan
-                </a>
-                <a href="#" class="px-8 py-4 border border-white/20 text-white font-sans font-medium hover:border-white transition-all duration-300 flex items-center justify-center gap-2">
-                    <i data-lucide="user" class="w-4 h-4"></i> Inloggen Portaal
-                </a>
-            </div>
-
-            <p class="mt-12 font-mono text-xs text-white/30 uppercase tracking-widest">
-                Exclusive Distribution in Friesland & Randstad
-            </p>
-        </div>
-    </section>
-
-    <footer class="bg-clay-900 pt-12 pb-8 border-t border-white/5">
-        <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-left">
-                <span class="font-serif text-2xl font-bold text-white tracking-tighter">SKYLD</span>
-                <span class="text-white/40 text-xs ml-2">EST. 2026</span>
-            </div>
-            
-            <div class="flex gap-8">
-                <a href="medical.html" class="font-mono text-[10px] text-white/40 hover:text-neon-orange uppercase tracking-widest transition-colors">Skyld Medical</a>
-                <a href="sport.html" class="font-mono text-[10px] text-white/40 hover:text-neon-orange uppercase tracking-widest transition-colors">Skyld Sport</a>
-                <span class="font-mono text-[10px] text-neon-orange uppercase tracking-widest border-b border-neon-orange">Skyld Retail</span>
-            </div>
-
-            <div class="text-white/20 text-[10px] font-mono">
-                &copy; SKYLD B.V. // Dokkum, Friesland
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-
-        // Simple Reveal on Scroll Observer
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>

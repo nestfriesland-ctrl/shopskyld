@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKYLD | Scientific Artisan Ice Cream</title>
-    <meta name="description" content="Het ijs van de toekomst. A2-Eiwit, volromig en fris. Exclusief voor fijnmazige retail en horeca.">
+    <meta name="description" content="Lacaune Schapenmelkijs uit Morra. Verrijkt met A2-eiwit en supplementen. De ultieme balans tussen gastronomie en herstel.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -96,7 +96,7 @@
             </a>
 
             <div class="hidden md:flex items-center gap-12 font-sans text-xs font-medium tracking-widest uppercase text-clay-800/80">
-                <a href="#origin" class="hover:text-neon-orange transition-colors">Oorsprong</a>
+                <a href="#about" class="hover:text-neon-orange transition-colors">Het Verhaal</a>
                 <a href="#product" class="hover:text-neon-orange transition-colors">Het IJs</a>
                 <a href="#gastronomy" class="hover:text-neon-orange transition-colors">Business</a>
                 <a href="#contact" class="hover:text-neon-orange transition-colors">Partner Worden</a>
@@ -114,79 +114,103 @@
         </div>
     </nav>
 
-    <header class="relative h-[100vh] w-full overflow-hidden flex items-center justify-center bg-clay-900">
-        <div class="absolute inset-0 z-0 opacity-60">
+    <header id="about" class="relative min-h-[110vh] w-full overflow-hidden flex flex-col bg-clay-900">
+        
+        <div class="absolute inset-0 z-0 opacity-40">
              <video autoplay muted loop playsinline class="w-full h-full object-cover grayscale">
                 <source src="assets/Video_header_final.mov" type="video/mp4"> 
             </video>
         </div>
         
-        <div class="absolute inset-0 bg-gradient-to-t from-clay-900 via-transparent to-black/30 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-clay-900/40 via-transparent to-clay-900 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-clay-900/90 via-clay-900/40 to-transparent z-10"></div>
 
-        <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
-            <span class="block font-mono text-neon-orange text-xs tracking-[0.3em] uppercase mb-6 animate-fade-in-up">Est. Noardeast-Fryslân</span>
-            
-            <h1 class="font-serif text-5xl md:text-8xl text-cream-50 leading-[1.1] mb-8 animate-fade-in-up delay-100">
-                Oerkracht in <br>
-                <span class="italic font-light">Verfijning.</span>
-            </h1>
+        <div class="relative z-20 flex-grow flex items-center">
+            <div class="max-w-[1400px] mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center pt-24">
+                
+                <div class="animate-fade-in-up">
+                    <div class="flex items-center gap-3 mb-6">
+                         <span class="px-3 py-1 border border-neon-orange/50 text-neon-orange text-[10px] font-mono uppercase tracking-widest bg-neon-orange/10 backdrop-blur-md rounded-full">
+                            Nieuwe Oogst: Morra
+                         </span>
+                         <span class="text-cream-50/60 text-[10px] font-mono uppercase tracking-widest">
+                            Noardeast-Fryslân
+                         </span>
+                    </div>
 
-            <p class="font-sans text-clay-800/80 md:text-cream-50/80 text-sm md:text-lg max-w-xl mx-auto leading-relaxed mb-12 animate-fade-in-up delay-200">
-                De zuiverste Friese gastronomie. Gedreven door de natuur, geperfectioneerd door wetenschap. 
-                Een nieuwe standaard voor retail en horeca.
-            </p>
+                    <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-cream-50 leading-[0.95] mb-8">
+                        Frans Ras. <br>
+                        <span class="text-neon-orange">Friese Klei.</span>
+                    </h1>
 
-            <a href="#origin" class="inline-flex flex-col items-center gap-2 text-cream-50/50 hover:text-neon-orange transition-colors animate-fade-in-up delay-300">
-                <span class="text-[10px] font-mono uppercase tracking-widest">Ontdek het terroir</span>
-                <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
-            </a>
+                    <p class="font-sans text-cream-50/90 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+                        In het weidse landschap van Morra grazen onze <strong>Lacaune schapen</strong>. Een trots Frans ras, beroemd om hun rijke, volle melk. 
+                        Door de zilte Friese zeeklei krijgt deze melk een karakter dat koemelk nooit zal evenaren.
+                    </p>
+
+                    <p class="font-sans text-cream-50/70 text-base leading-relaxed mb-10 max-w-xl border-l-2 border-neon-orange pl-6">
+                        We hebben deze culinaire perfectie verrijkt met een <strong>wetenschappelijke boost</strong>. 
+                        Extra A2-eiwitten en supplementen, onzichtbaar verwerkt in een dessert van wereldklasse. 
+                        <br><span class="text-white font-medium italic mt-2 block">"Gezondheid was nog nooit zo'n genot."</span>
+                    </p>
+
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <a href="#product" class="inline-flex items-center gap-2 bg-cream-50 text-clay-900 px-8 py-4 font-sans font-bold hover:bg-neon-orange hover:text-white transition-all">
+                            Bekijk het IJs
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <div class="flex items-center gap-4 text-cream-50/50">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            <span class="text-xs font-mono uppercase tracking-widest">Locatie: Morra (53°N)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex flex-col gap-6 items-end animate-fade-in-up delay-200">
+                     <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 max-w-sm w-full hover:border-neon-orange/50 transition-colors group cursor-default">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-serif text-2xl text-cream-50">Lacaune</span>
+                            <i data-lucide="dna" class="w-5 h-5 text-neon-orange"></i>
+                        </div>
+                        <p class="text-sm text-cream-50/70 font-sans mb-4">
+                            Het "Roquefort-schaap". Geeft melk met een superieure vet- en eiwitstructuur. Romiger dan ijs, lichter verteerbaar.
+                        </p>
+                        <div class="w-full h-32 bg-clay-800 rounded overflow-hidden relative">
+                             <img src="https://images.unsplash.com/photo-1484557985045-6f5c0ea8fa7b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" alt="Lacaune Schaap">
+                        </div>
+                     </div>
+
+                     <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 max-w-sm w-full hover:border-neon-orange/50 transition-colors group cursor-default">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="font-serif text-2xl text-cream-50">De Boost</span>
+                            <i data-lucide="zap" class="w-5 h-5 text-neon-orange"></i>
+                        </div>
+                        <ul class="space-y-2 text-sm text-cream-50/70 font-mono">
+                            <li class="flex justify-between border-b border-white/10 pb-1">
+                                <span>A2 Eiwit</span>
+                                <span class="text-white">Optimal</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/10 pb-1">
+                                <span>Creatine</span>
+                                <span class="text-white">Infused</span>
+                            </li>
+                            <li class="flex justify-between pb-1">
+                                <span>Smaak</span>
+                                <span class="text-neon-orange font-bold">10/10</span>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-cream-50/30 animate-bounce">
+            <i data-lucide="arrow-down" class="w-6 h-6"></i>
         </div>
     </header>
 
-    <section id="origin" class="py-24 md:py-32 bg-cream-50 px-6">
-        <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
-            <div class="reveal relative">
-                <div class="aspect-[4/5] bg-clay-200 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2832&auto=format&fit=crop" alt="Fries Landschap" class="w-full h-full object-cover sepia-[0.2] grayscale-[0.3]">
-                    <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur p-4 max-w-xs">
-                        <p class="font-mono text-[10px] text-clay-800 mb-1">COORDINATES</p>
-                        <p class="font-mono text-xs text-clay-800 font-bold">53°21'N 6°08'E (MORRA)</p>
-                    </div>
-                </div>
-                <div class="absolute -right-12 top-24 hidden lg:block bg-neon-orange text-white p-4 w-48 z-10">
-                    <p class="font-mono text-[10px] uppercase border-b border-white/30 pb-2 mb-2">Soil Analysis</p>
-                    <p class="font-sans text-xs leading-relaxed">Zilte kleigrond rijk aan mineralen. Directe invloed op gras-nutriënten en melksmaak.</p>
-                </div>
-            </div>
-
-            <div class="reveal space-y-8">
-                <h2 class="font-serif text-4xl md:text-6xl text-clay-900 leading-tight">
-                    Gekneed door <br>de Friese wind.
-                </h2>
-                <div class="w-16 h-0.5 bg-neon-orange"></div>
-                
-                <p class="font-sans text-clay-800 text-lg leading-relaxed">
-                    Dit is geen "gezellige boerderij"-romantiek. Dit is het ruige landschap van Noardeast-Fryslân. De koeien grazen hier op zilte kwelderwallen en rijke zeekleipolders.
-                </p>
-                <p class="font-sans text-clay-800/70 text-base leading-relaxed">
-                    Deze specifieke bodemsamenstelling geeft onze A2-melk zijn karakter. Waar anderen kiezen voor zoet en vlak, kiezen wij voor diepgang en oorsprong. Wij noemen dit de <strong>"Soil Impact"</strong>. Het is de basis van ijs dat niet alleen vult, maar voedt en verrast.
-                </p>
-
-                <div class="grid grid-cols-2 gap-8 pt-8 border-t border-clay-800/10">
-                    <div>
-                        <span class="block font-serif text-3xl text-clay-900 mb-1">A2</span>
-                        <span class="font-mono text-xs text-clay-500 uppercase">Oer-Eiwit Structuur</span>
-                    </div>
-                    <div>
-                        <span class="block font-serif text-3xl text-clay-900 mb-1">100%</span>
-                        <span class="font-mono text-xs text-clay-500 uppercase">Traceable Sourcing</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="product" class="py-24 bg-clay-900 text-cream-50 relative overflow-hidden">
+    <section id="product" class="py-24 bg-clay-900 text-cream-50 relative overflow-hidden border-t border-white/5">
         <div class="absolute top-10 left-0 w-full text-center pointer-events-none opacity-5">
             <span class="font-serif text-[15vw] leading-none text-outline">NO GUILT</span>
         </div>
@@ -197,7 +221,7 @@
                 <h2 class="font-serif text-4xl md:text-5xl mt-4">Eindelijk ijs zonder schuldgevoel.</h2>
                 <p class="text-white/70 mt-4 font-sans text-lg max-w-lg mx-auto leading-relaxed">
                     Vergeet die 30 verschillende smaken vol toevoegingen. Wij maken er maar één. 
-                    Volromig, eiwitrijk en met een fris vleugje citroen. 
+                    Volromig schapenmelkijs, eiwitrijk en met een fris vleugje citroen. 
                     <br><span class="text-white font-bold">Lekkerder voor jou, beter voor je lijf.</span>
                 </p>
             </div>
@@ -215,7 +239,7 @@
                     <div class="mt-6">
                         <h3 class="font-serif text-2xl mb-2">Puur & Fris</h3>
                         <p class="font-sans text-sm text-white/70 mb-4">
-                            De perfecte balans. De romigheid die je zoekt in boerenijs, maar dan met een frisse 'touch' van citroen. Hierdoor ligt het niet zwaar op de maag.
+                            De perfecte balans. De romigheid van Lacaune schapenmelk, maar dan met een frisse 'touch' van citroen. Hierdoor ligt het niet zwaar op de maag.
                         </p>
                         <div class="flex gap-2">
                             <span class="px-2 py-1 border border-white/20 text-[10px] font-mono uppercase text-white/80">Licht Verteerbaar</span>
@@ -296,7 +320,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="check-circle" class="w-4 h-4 text-neon-orange"></i>
-                            Unieke Terroir Storytelling voor de gast
+                            Lacaune Schapenmelk Storytelling voor de gast
                         </li>
                     </ul>
                 </div>
